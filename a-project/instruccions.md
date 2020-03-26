@@ -1,5 +1,5 @@
 # AdminPro angular v9
-## Gti repositori
+## Git repositori
 - Añadir repositorio remoto en el terminal  
 ```
 git remote add origin https://github.com/jollcw/AdminPro-v9.git  
