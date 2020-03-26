@@ -51,3 +51,79 @@ señalar por defecto '-u' la rama master
 
         añadir instrucciones
   ```
+# Sección 3: Estructuración de nuestro proyecto
+## Seccion 3 - 18. Primeros componentes e inicio de la estructura del proyecto  
+Crear partes de la app
+### Crear paginas app
+- Login  
+$ ng g c login --skipTests=true -s
+- Pagina no enconrada  
+$ ng g c nopagefound --skipTests=true -s  
+- Pag principal  
+$ ng g c pages/dashboard --skipTests=true -s
+- Prueba componentes personalizados  
+$ ng g c pages/progress --skipTests=true -s
+- Graficas  
+$ ng g c pages/graficas1 --skipTests=true -s
+### Crear partes comunes app
+- header  
+$ ng g c shared/header --skipTests=true -s
+- sidebar  
+$ ng g c shared/sidebar --skipTests=true -s
+- breadcrumbs  
+$ ng g c shared/breadcrumbs --skipTests=true -s
+### Crear servicios app
+- Para el manejo de partes comunes  
+ ng g s services/shared --skipTests=true
+- Para el manejo del sidebar  
+ ng g s services/sidebar --skipTests=true 
+
+### modificaciones app
+Mover la carprta: nopagefound -> angular race las rutas de la importación en app.modules.ts
+## Seccion 3 - 19. Agregar las librerías externas necesarias
+### Copiar librerias necesarias para el propyecto
+De la plantilla, copiar -> \Material-de-la-seccion-3\main\  
+- js
+- css
+- sass  
+a -> \adminpro-v9\src\assets\
+De la plantilla, copiar ->  \Material-de-la-seccion-3\assets\plugins\bootstrap
+a -> \adminpro-v9\src\assets\plugins\  
+De la plantilla, copiar ->  \Material-de-la-seccion-3\assets\plugins\jquery
+a -> \adminpro-v9\src\assets\plugins\
+De la plantilla, copiar ->  \Material-de-la-seccion-3\assets\plugins\sparklinery
+a -> \adminpro-v9\src\assets\plugins\
+De la plantilla, copiar ->  \Material-de-la-seccion-3\assets\plugins\sticky-kit-master
+a -> \adminpro-v9\src\assets\plugins\
+De la plantilla, copiar ->  \Material-de-la-seccion-3\assets\images
+a -> \adminpro-v9\src\assets\
+
+### De esta pag vamos a sacar 
+De la plantilla, copiar -> \Material-de-la-seccion-3\main\  
+pages-blank.html
+- Favicon icon
+copiar a -> index.html  
+
+De la plantilla, copiar -> \Material-de-la-seccion-3\main\  
+pages-blank.html
+- All Jquery hasta Custom JavaScript (incluido)
+copiar a -> index.html
+
+- Arreglar las rutas
+- En algunos casos hay que reiniciar el servidor para que recompile las nuevas rutas
+## Seccion 3 - 20. Header, SiderBar, Breadcrumbs y contenedor principal
+- INDEX.html - Modificar las classes del body
+<body class="fix-header card-no-border fix-sidebar">
+
+- Añadir el preloader
+<!-- Preloader - style you can find in spinners.css -->
+
+- APP.component.html
+<div id="main-wrapper">
+incluir <app-header></app-header>
+
+- header.component.html
+<header class="topbar">
+
+sacar -> <!-- Comment -->
+sacar -> <!-- mega menu -->
