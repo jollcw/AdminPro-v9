@@ -115,15 +115,50 @@ copiar a -> index.html
 - INDEX.html - Modificar las classes del body
 <body class="fix-header card-no-border fix-sidebar">
 
-- Añadir el preloader
-<!-- Preloader - style you can find in spinners.css -->
+- Añadir el preloader  
+```<!-- Preloader - style you can find in spinners.css -->```
 
 - APP.component.html
 <div id="main-wrapper">
-incluir <app-header></app-header>
+incluir -> <app-header></app-header>
 
 - header.component.html
 <header class="topbar">
 
 sacar -> "!-- Comment --"  
-sacar -> "!-- mega menu --"
+sacar -> "!-- mega menu --"  
+De momento comentar -> "!-- Language --"
+
+- sidebar.component.html  
+añadir -> "!-- Sidebar navigation --"
+
+- APP.component.html
+incluir -> <app-sidebar></app-sidebar>
+
+añadir el envoltorio -> 
+  - "!-- Page wrapper --"
+  -  i dentro el envoltorio ->
+    - "!-- Container fluid --"  
+    -  i dentro el ->
+      - "!-- Bread crumb --"
+      - Debajo el breadcrumbs
+      incluir _> "!-- Page content --" que sera el content dummy, i el <router-outlet>, de momento comentado
+## Seccion 3 - 21. Implementando las rutas principales
+Aqui hay una diferencia con la explicación. Yo, al crear el proyecto elegí la opción de routing: yes. con lo cual ya incluyo el modulo de routing i lo utilizo.
+
+## Seccion 3 - 22. Implementando las rutas principales
+Crear un componente dentro de pages que cargara todas las paginas, excepto el login. Este tendrá otro layout diferente. Todas las paginas tendrán un layout común.  
+El app.component.html caragará los diferentes layouts: pages.component.html y login.component.html.  
+Par ello todo el html de app.component.html se mueve a -> pages.component.html, y allí solo queda el <router-outlet>
+ ng g c pages/pages  --skipTests=true -s --flat
+Modificar las rutas creando rutas hijas ppara el pages.component.html
+Modificar el -> login.component.html, copiar el -> pages-login-2.html
+Modificar el -> login.component.html, copiar el -> login-register-lock.css
+
+## Seccion 3 - 23. 24. Resolución de la tarea práctica #2 - Register template
+
+ ng g c login/register --skipTests=true --flat
+
+## Seccion 3 - 25. Aceleración de las animaciones
+Modificar el estilo de la libreria naimated en el Header.component.html
+animated fadeIn
