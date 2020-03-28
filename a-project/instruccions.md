@@ -149,16 +149,21 @@ Aqui hay una diferencia con la explicación. Yo, al crear el proyecto elegí la 
 ## Seccion 3 - 22. Implementando las rutas principales
 Crear un componente dentro de pages que cargara todas las paginas, excepto el login. Este tendrá otro layout diferente. Todas las paginas tendrán un layout común.  
 El app.component.html caragará los diferentes layouts: pages.component.html y login.component.html.  
-Par ello todo el html de app.component.html se mueve a -> pages.component.html, y allí solo queda el <router-outlet>
+- Par ello todo el html de app.component.html se mueve a -> pages.component.html, y allí solo queda el <router-outlet>
  ng g c pages/pages  --skipTests=true -s --flat
-Modificar las rutas creando rutas hijas ppara el pages.component.html
-Modificar el -> login.component.html, copiar el -> pages-login-2.html
-Modificar el -> login.component.html, copiar el -> login-register-lock.css
+- Modificar las rutas creando rutas hijas para el pages.component.html
+- Modificar el -> login.component.html, copiar el -> pages-login-2.html
+- Modificar el -> login.component.css, copiar el -> login-register-lock.css
 
 ## Seccion 3 - 23. 24. Resolución de la tarea práctica #2 - Register template
-
+- Crear el -> register  
  ng g c login/register --skipTests=true --flat
+- Modificar el -> register.component.html, copiar el -> pages-register2.html
+- Modificar el -> register.component.html para que use el css de el -> login.component.css
 
 ## Seccion 3 - 25. Aceleración de las animaciones
-Modificar el estilo de la libreria naimated en el Header.component.html
-animated fadeIn
+Modificar el estilo de la libreria aimated en el Header.component.html  
+-> animated fadeIn
+
+---
+Con todo esto ya esta la plantilla lista para crear la aplicación
