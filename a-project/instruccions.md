@@ -165,5 +165,38 @@ El app.component.html caragará los diferentes layouts: pages.component.html y l
 Modificar el estilo de la libreria aimated en el Header.component.html  
 -> animated fadeIn
 
+
+
+
+## Seccion 4 - 30. Creando nuestro primer módulo
+Crear el modulo pages.module.ts  
+Este modulo se encarga de aglutinar todos los componentes de Pages y el pages-routing.module.ts, de esta manera descargamos el app.module.ts  
+En pages.module.ts incluimos todos los componentes de pages  
+En app.module.ts eliminamos todos los componentes de pages, pero importamos el pages.module.ts (hay que ponerlo en el apartado-> @NgModule({ ...
+  imports: [])  
+IMPORTANTE -> hay que ponerlo antes que AppRoutingModule, ya que el pages.module.ts incluye el pages-routing.module.ts, que tiene rutas hijas que utiliza pages-routing.module.ts
+## Seccion 4 - 31 - 32. Creación de un módulo shared
+Crear el modulo shared.module.ts  
+Este modulo se encarga de aglutinar todos los componentes de Shared
+## Seccion 4 - 33. Rutas hijas - ForChild( )
+Crear el modulo -> pages-routing.module.ts  
+Se encarga de controlar las rutas (hijas) del apartado Pages, de esta manera se descarga app.routing.module.ts  
+Este modulo lo importa -> pages.module.ts
+ ng g m pages/pages --routing=true --routingScope=Child --flat
+## Seccion 4 - 34. Realizar una limpieza de los módulos y rutas
+Limpiar los comentarios i las importaciones innecesarias ya que estan en otros modulos aglutinados
 ---
 Con todo esto ya esta la plantilla lista para crear la aplicación
+---
+## Sección 6 - 42. Explicar la necesidad de la comunicación entre componentes
+Modificar progress.component.html, añadir -> <div class="input-group mb-3">
+## Sección 6 - 43. Uso de atributos personalizados con Angular
+<div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 75%"
+          ></div>
+          
