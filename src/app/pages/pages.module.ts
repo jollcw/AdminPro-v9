@@ -11,17 +11,19 @@ import { ProgressComponent } from './progress/progress.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
 
 import { FormsModule } from '@angular/forms';
-
+// Temporal
+import { IncrementadorComponent } from './../components/incrementador/incrementador.component';
 
 @NgModule({
   declarations: [
     PagesComponent,
     DashboardComponent,
     ProgressComponent,
-    Graficas1Component
+    Graficas1Component,
+    IncrementadorComponent
   ],
   imports: [
-  CommonModule,
+    CommonModule,
     SharedModule,
     PagesRoutingModule,
     FormsModule

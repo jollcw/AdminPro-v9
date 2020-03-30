@@ -202,3 +202,16 @@ Modificar progress.component.html, añadir -> <div class="input-group mb-3">
             style="width: 75%"
           ></div>
           
+
+
+## Sección 6 - 44. Crear componente incrementador
+$ ng g c components/incrementador  --skipTests=true -s
+Copiar el htm del incrementador de progress.component.html a -> incrementador.component.html  
+Copiar el js del incrementador de progress.component.ts a -> incrementador.component.ts  
+Importar y poner en las declarations[] de pages.module.ts el incrementador.component
+Sacar en import y las declarations[] de pages.module.ts el incrementador.component
+
+## Sección 6 - 45. @Input - Componente incrementador
+
+## Sección 6 - 46. @Output - Componente incrementador
+
