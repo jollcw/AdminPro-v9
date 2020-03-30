@@ -184,9 +184,11 @@ Se encarga de controlar las rutas (hijas) del apartado Pages, de esta manera se 
 Este modulo lo importa -> pages.module.ts
  ng g m pages/pages --routing=true --routingScope=Child --flat
 ## Seccion 4 - 34. Realizar una limpieza de los módulos y rutas
-Limpiar los comentarios i las importaciones innecesarias ya que estan en otros modulos aglutinados
+Limpiar los comentarios i las importaciones innecesarias ya que estan en otros modulos aglutinados  
+
 ---
 Con todo esto ya esta la plantilla lista para crear la aplicación
+
 ---
 ## Sección 6 - 42. Explicar la necesidad de la comunicación entre componentes
 Modificar progress.component.html, añadir -> <div class="input-group mb-3">
