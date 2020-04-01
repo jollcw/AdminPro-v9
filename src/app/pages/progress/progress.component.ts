@@ -17,20 +17,8 @@ export class ProgressComponent implements OnInit {
   }
 
   actualizar(event: number) {
-    console.log('envent ', event);
+    // console.log('envent ', event);
     this.progreso1 = event;
   }
 
-  // cambiarValor(valor: number) {
-  //   if (this.progreso >= 100 && valor > 0) {
-  //     this.progreso = 100;
-  //     return;
-  //   }
-  //   if (this.progreso < 0 && valor < 0) {
-  //   // if (this.progreso <= 0 ) {
-  //     this.progreso = 0;
-  //     return;
-  //   }
-  //   this.progreso = Number(this.progreso) + valor;
-  // }
 }

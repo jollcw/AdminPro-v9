@@ -215,3 +215,6 @@ Sacar en import y las declarations[] de pages.module.ts el incrementador.compone
 
 ## Sección 6 - 46. @Output - Componente incrementador
 
+## Sección 6 - 51. Resolución de la tarea práctica #4 - ng2-charts
+$ ng g c components/graficoDona -s --skipTests=true --skipImport=true
+
