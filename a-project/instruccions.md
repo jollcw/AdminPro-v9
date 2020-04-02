@@ -239,3 +239,11 @@ $ ng g s services/settings -m="app.module.ts" --skipTests=true
 $ ng g s services/settings --skipTests=true
 ## Sección 7: 62. Tip: Agrupar todos los servicios en un módulo y en un sólo archivo
 $ ng g m services/service --flat
+## Sección 7: 64. Uso de Scripts de archivos importados en el index.html en TypeScript
+creada en  -> /assets/js/custom.min.js, una funcion que envuelve todo el código que inicializa los plugins  
+Declarar la funcion para poder utilarla  
+declare function init_plugins();  
+// Llamar a la funcion creada en  -> /assets/js/custom.min.js, que inicializa los plugins del -> /assets/js/custom.min.js
+ngOnInit(): void {
+    init_plugins();
+  }
