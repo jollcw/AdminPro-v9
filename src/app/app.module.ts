@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 // Routes
 // import { APP_ROUTES } from './app.routes';
 import { AppRoutingModule } from './app-routing.module';
+// Services
+import { ServiceModule } from './services/service.module';
 
 // Modulos
 import { PagesModule } from './pages/pages.module';
@@ -33,7 +35,8 @@ import { RegisterComponent } from './login/register.component';
     PagesModule,
     AppRoutingModule,
     // APP_ROUTES
-    FormsModule
+    FormsModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

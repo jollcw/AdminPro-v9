@@ -218,3 +218,24 @@ Sacar en import y las declarations[] de pages.module.ts el incrementador.compone
 ## Sección 6 - 51. Resolución de la tarea práctica #4 - ng2-charts
 $ ng g c components/graficoDona -s --skipTests=true --skipImport=true
 
+## Sección 7: Servicios básicos, temas, rutas básicas y persistencia de los ajustes
+## Sección 7: 57. Diseño inicial de la página account-settings
+$ ng g c pages/accountSettings -m="pages/pages.module.ts" -s --skipTests=true
+crear la ruta
+modificar el account-settings.component.html
+modificar styles.css
+
+## Sección 7: 58. Cambiar el CSS principal de forma dinámica
+archivos de temas -> \adminpro-v9\src\assets\css\colors
+modificar -> src\index.html, añadir id=tema al link de temas <link id="tema" href="assets/css/colors/default-dark.css" id="theme" rel="stylesheet">
+Utilizar constructor( @Inject(DOCUMENT) private _document ) { } , para poder hacer referencia al dom  
+
+## Sección 7: 59. Agregando clases de CSS sin usar ngClass
+La classe ->  working es la que marca el check en el tema elegido  
+Añadir el atributo link -> '<a #link1 (click)="cambiarColor('default')" data-theme="default" class="selector default-theme">1</a>'
+
+## Sección 7: 60. Servicio Settings - Hacer persistente los ajustes
+$ ng g s services/settings -m="app.module.ts" --skipTests=true
+$ ng g s services/settings --skipTests=true
+## Sección 7: 62. Tip: Agrupar todos los servicios en un módulo y en un sólo archivo
+$ ng g m services/service --flat
