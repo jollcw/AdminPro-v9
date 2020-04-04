@@ -247,3 +247,10 @@ declare function init_plugins();
 ngOnInit(): void {
     init_plugins();
   }
+
+## Seccion 8: Promesas
+$ ng g c pages/promesas -s --skipTests=true  
+
+
+
+$ ng g c pages/rxjs -s --skipTests=true
