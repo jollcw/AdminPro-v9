@@ -254,3 +254,10 @@ $ ng g c pages/promesas -s --skipTests=true
 
 
 $ ng g c pages/rxjs -s --skipTests=true
+
+
+## Seccion 13: 162 Guards
+ng g g services/guards/loginGuard --skipTests=true
+? Which interfaces would you like to implement? 
+>(*) CanActivate
+

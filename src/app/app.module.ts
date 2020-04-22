@@ -11,7 +11,7 @@ import { ServiceModule } from './services/service.module';
 import { PagesModule } from './pages/pages.module';
 
 // Provisional
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Componentes
 import { AppComponent } from './app.component';
@@ -36,6 +36,7 @@ import { RegisterComponent } from './login/register.component';
     AppRoutingModule,
     // APP_ROUTES
     FormsModule,
+    ReactiveFormsModule,
     ServiceModule
   ],
   providers: [],
