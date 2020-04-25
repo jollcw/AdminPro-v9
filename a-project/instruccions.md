@@ -261,3 +261,14 @@ ng g g services/guards/loginGuard --skipTests=true
 ? Which interfaces would you like to implement? 
 >(*) CanActivate
 
+## Seccion 14: 168 Pipes
+$ ng g p pipes/imagen --skipTests=true --skipImpor 
+t=true
+
+$ ng g m pipes/pipes --flat
+
+## Seccion 14: 170 Pipes
+$ ng g c pages/profile --skipTests=true -s
+
+## Seccion 14: 170 subir archivo
+$ ng g s services/subirArchivo --skipTests=true

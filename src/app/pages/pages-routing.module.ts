@@ -9,6 +9,7 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { LoginGuardGuard } from '../services/service.index';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
       {path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesas'}},
       {path: 'rxjs', component: RxjsComponent, data: {titulo: 'RxJs'}},
       {path: 'account-settings', component: AccountSettingsComponent, data: {titulo: 'Ajustes de tema'}},
+      {path: 'perfil', component: ProfileComponent, data: {titulo: 'Perfil del usuario'}},
       {path: '', redirectTo: '/dashboard', pathMatch: 'full'}
     ]
   }
@@ -30,6 +32,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-exports: [RouterModule]
+  exports: [RouterModule]
 })
 export class PagesRoutingModule { }

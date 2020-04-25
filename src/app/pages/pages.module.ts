@@ -14,12 +14,15 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 
 
 import { FormsModule } from '@angular/forms';
+// Pipes module
+import { PipesModule } from './../pipes/pipes.module';
 // Temporal
 import { IncrementadorComponent } from './../components/incrementador/incrementador.component';
 import { GraficoDonaComponent } from './../components/grafico-dona/grafico-dona.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -32,14 +35,16 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     GraficoDonaComponent,
     AccountSettingsComponent,
     PromesasComponent,
-    RxjsComponent
+    RxjsComponent,
+    ProfileComponent
   ],
   imports: [
-    CommonModule,
+  CommonModule,
     SharedModule,
     PagesRoutingModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    PipesModule
   ],
   exports: [
     DashboardComponent,
