@@ -13,13 +13,6 @@ export class SubirArchivoService {
 
   constructor(private http: HttpClient) { }
 
-  public postFileImagen(imagenParaSubir: File) {
-
-    const formData = new FormData();
-    formData.append('imagenPropia', imagenParaSubir, imagenParaSubir.name);
-    return this.http.post(this.url, formData);
-
-  }
   /**
    * Llama a la api de subir img
    * @param archivo : File, img a subir

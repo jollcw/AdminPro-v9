@@ -272,3 +272,11 @@ $ ng g c pages/profile --skipTests=true -s
 
 ## Seccion 14: 170 subir archivo
 $ ng g s services/subirArchivo --skipTests=true
+
+$ ng g c pages/usuarios -s --skipTests=true
+
+$ ng g c components/modalUpload -s ---skipTests=true --skipImport=true
+
+##  Seccion 1?: 187
+$ ng g s components/modal-upload/modalUpload --skipTest
+s=true

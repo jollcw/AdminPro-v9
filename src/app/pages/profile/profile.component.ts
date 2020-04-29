@@ -16,9 +16,6 @@ export class ProfileComponent implements OnInit {
   // imagenTemp: string;
   imagenTemp: string | ArrayBuffer;
 
-  public respuestaImagenEnviada;
-  public resultadoCarga;
-
   constructor(
     public usuarioServ: UsuarioService,
     public subirArchivoServ: SubirArchivoService
@@ -38,34 +35,6 @@ export class ProfileComponent implements OnInit {
 
     this.usuarioServ.actualizarUsuario(this.usuario)
       .subscribe();
-  }
-
-  public cargandoImagen(files: FileList) {
-
-    this.subirArchivoServ.postFileImagen(files[0]).subscribe(
-
-      response => {
-        this.respuestaImagenEnviada = response;
-        if (this.respuestaImagenEnviada <= 1) {
-          console.log('Error en el servidor');
-        } else {
-
-          if (this.respuestaImagenEnviada.code === 200 && this.respuestaImagenEnviada.status === 'success') {
-
-            this.resultadoCarga = 1;
-
-          } else {
-            this.resultadoCarga = 2;
-          }
-
-        }
-      },
-      error => {
-        console.log(error);
-      }
-
-    ); // FIN DE METODO SUBSCRIBE
-
   }
 
   /**
